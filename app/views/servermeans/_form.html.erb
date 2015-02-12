@@ -1,0 +1,37 @@
+<%= form_for(@servermean) do |f| %>
+  <% if @servermean.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@servermean.errors.count, "error") %> prohibited this servermean from being saved:</h2>
+
+      <ul>
+      <% @servermean.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :key %><br>
+    <%= f.text_field :key %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.text_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

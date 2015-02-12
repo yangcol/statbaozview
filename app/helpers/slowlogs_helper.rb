@@ -1,0 +1,2 @@
+module SlowlogsHelper
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @servermean.name %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @servermean.key %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @servermean.date %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @servermean.duration %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @servermean.value %>
+</p>
+
+<%= link_to 'Edit', edit_servermean_path(@servermean) %> |
+<%= link_to 'Back', servermeans_path %>

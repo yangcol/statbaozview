@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @slowlog.name %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @slowlog.key %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @slowlog.duration %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @slowlog.date %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @slowlog.value %>
+</p>
+
+<%= link_to 'Edit', edit_slowlog_path(@slowlog) %> |
+<%= link_to 'Back', slowlogs_path %>

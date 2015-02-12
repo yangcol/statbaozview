@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Serverpvs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Key</th>
+      <th>Date</th>
+      <th>Duration</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @serverpvs.each do |serverpv| %>
+      <tr>
+        <td><%= serverpv.name %></td>
+        <td><%= serverpv.key %></td>
+        <td><%= serverpv.date %></td>
+        <td><%= serverpv.duration %></td>
+        <td><%= serverpv.value %></td>
+        <td><%= link_to 'Show', serverpv %></td>
+        <td><%= link_to 'Edit', edit_serverpv_path(serverpv) %></td>
+        <td><%= link_to 'Destroy', serverpv, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @serverpvs, renderer: BootstrapPagination::Rails %>
+<br>
+
+<%= link_to 'New Serverpv', new_serverpv_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @serverpv.name %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @serverpv.key %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @serverpv.date %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @serverpv.duration %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @serverpv.value %>
+</p>
+
+<%= link_to 'Edit', edit_serverpv_path(@serverpv) %> |
+<%= link_to 'Back', serverpvs_path %>

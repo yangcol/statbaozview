@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Servermeans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Key</th>
+      <th>Date</th>
+      <th>Duration</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @servermeans.each do |servermean| %>
+      <tr>
+        <td><%= servermean.name %></td>
+        <td><%= servermean.key %></td>
+        <td><%= servermean.date %></td>
+        <td><%= servermean.duration %></td>
+        <td><%= servermean.value %></td>
+        <td><%= link_to 'Show', servermean %></td>
+        <!--<td><%= link_to 'Edit', edit_servermean_path(servermean) %></td>-->
+        <!--<td><%= link_to 'Destroy', servermean, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @servermeans, renderer: BootstrapPagination::Rails %>
+<br>
+
+<%= link_to 'New Servermean', new_servermean_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Slowlogexts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Key</th>
+      <th>Duration</th>
+      <th>Date</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @slowlogexts.each do |slowlogext| %>
+      <tr>
+        <td><%= slowlogext.name %></td>
+        <td><%= slowlogext.key %></td>
+        <td><%= slowlogext.duration %></td>
+        <td><%= slowlogext.date %></td>
+        <td><%= slowlogext.value %></td>
+        <td><%= link_to 'Show', slowlogext %></td>
+        <td><%= link_to 'Edit', edit_slowlogext_path(slowlogext) %></td>
+        <td><%= link_to 'Destroy', slowlogext, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @slowlogexts, renderer: BootstrapPagination::Rails %>
+<br>
+
+<%= link_to 'New Slowlogext', new_slowlogext_path %>
