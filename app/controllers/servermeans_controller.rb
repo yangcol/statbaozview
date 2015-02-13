@@ -1,5 +1,6 @@
 class ServermeansController < ApplicationController
   before_action :set_servermean, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /servermeans
   # GET /servermeans.json

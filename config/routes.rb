@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+
+  # resources :users
+  # get 'users' => 'users#index'
+  root to: 'visitors#index'
+
+  resources :users
+
   # 默认情况下，url不能使用. 因为.因为点号是格式化路由的分隔符。如果需要在 :id 中使用点号，可以添加一个约束条件。例如，id: /[^\/]+/ 可以接受除斜线之外的所有字符。
   get 'slowlogs/:name,:key,:duration,:date' => 'slowlogs#show', :name => /[^\/]+/
 

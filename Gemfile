@@ -58,3 +58,5 @@ gem 'momentjs-rails', '~> 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 
 gem 'bootstrap_form', '~> 2.2.0'
+
+gem 'devise', '~>3.4.1'

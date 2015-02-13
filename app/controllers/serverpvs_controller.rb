@@ -1,5 +1,6 @@
 class ServerpvsController < ApplicationController
   before_action :set_serverpv, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /serverpvs
   # GET /serverpvs.json

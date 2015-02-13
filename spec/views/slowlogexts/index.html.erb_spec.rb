@@ -7,15 +7,18 @@ RSpec.describe "slowlogexts/index", :type => :view do
         :name => "Name",
         :key => "Key",
         :duration => "Duration",
+        :date => "2015-01-21 14:29:00",
         :value => "MyText"
       ),
       Slowlogext.create!(
         :name => "Name",
         :key => "Key",
         :duration => "Duration",
+        :date => "2015-01-21 14:29:00",
         :value => "MyText"
       )
     ])
+    assign(:slowlogexts, Slowlogext.all.paginate(:page=>1))
   end
 
   it "renders a list of slowlogexts" do

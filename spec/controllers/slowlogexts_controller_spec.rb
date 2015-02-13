@@ -47,7 +47,7 @@ RSpec.describe SlowlogextsController, :type => :controller do
   describe "GET show" do
     it "assigns the requested slowlogext as @slowlogext" do
       slowlogext = Slowlogext.create! valid_attributes
-      get :show, {:id => slowlogext.to_param}, valid_session
+      get :'1show', {:id => slowlogext.to_param}, valid_session
       expect(assigns(:slowlogext)).to eq(slowlogext)
     end
   end

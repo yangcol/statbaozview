@@ -6,7 +6,8 @@ RSpec.describe "slowlogexts/new", :type => :view do
       :name => "MyString",
       :key => "MyString",
       :duration => "MyString",
-      :value => "MyText"
+      :value => "MyText",
+      :date => "2015-01-21 14:29:00"
     ))
   end
 
