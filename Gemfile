@@ -60,3 +60,5 @@ gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 gem 'bootstrap_form', '~> 2.2.0'
 
 gem 'devise', '~>3.4.1'
+
+gem 'bootstrap-sass', '~>3.3.1.0'
