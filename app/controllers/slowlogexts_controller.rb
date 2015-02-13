@@ -1,6 +1,6 @@
 class SlowlogextsController < ApplicationController
   before_action :set_slowlogext, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
   # GET /slowlogexts
   # GET /slowlogexts.json
   def index
